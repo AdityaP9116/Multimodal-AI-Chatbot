@@ -36,8 +36,8 @@ class APIServer(FastAPI):
     :type desc: str
     """
 
-    title = "Chat"
-    desc = "This service provides a sample conversation chatui flow."
+    title = "Psych AI"
+    desc = "AI Therapist specialized in delivering mental health to astronauts in deep space"
 
     def __init__(self, client: ChatClient) -> None:
         """Initialize the API server."""

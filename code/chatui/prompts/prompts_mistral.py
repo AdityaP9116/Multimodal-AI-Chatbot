@@ -26,6 +26,8 @@ retrieval_prompt = """
 Give a binary score 'yes' or 'no' score to indicate whether the document is relevant to the question. \n
 Your response format is non-negotiable: you must provide the binary score as a JSON with a single key 'score' and no preamble or explanation.
 
+If the retrieved document is a script, use the format and language used in the script to model the conversation.
+
 Here is the retrieved document: \n {document} \n
 Here is the user question: {question} 
 
@@ -33,9 +35,9 @@ Here is the user question: {question}
 """
 
 generator_prompt = """
-<s>[INST] You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use six sentences maximum and keep the answer concise.
+<s>[INST] You are a professional therapist who is specializes in space psychology. Your goal is to diagnose and treat astronauts in deep space. Be kind, and caring, but also informative and concise. 
 
-If the question is a greeting, always answer it without using the context.
+If the question is a greeting, always answer it with a greeting followed by an introduction of yourself. Your name is Dr Patty, an expert on space psycology and a therapist.
 
 Question: {question} 
 Context: {context} 
